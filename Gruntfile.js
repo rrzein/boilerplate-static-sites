@@ -22,18 +22,18 @@ module.exports = function(grunt) {
         }
       }
     },
-    cssmin: {
-      files: {
-        'stylesheets/ms.min.css': ['stylesheets/main.css']
-      },
-      minify: {
-        expand: true,
-        cwd: 'stylesheets/',
-        src: 'main.css',
-        dest: 'stylesheets/',
-        ext: '.min.css'
-      }
-    },
+    //cssmin: {
+      //files: {
+        //'stylesheets/ms.min.css': ['stylesheets/main.css']
+      //},
+      //minify: {
+        //expand: true,
+        //cwd: 'stylesheets/',
+        //src: 'main.css',
+        //dest: 'stylesheets/',
+        //ext: '.min.css'
+      //}
+    //},
     uglify: {
       my_target: {
         files: {
@@ -49,7 +49,8 @@ module.exports = function(grunt) {
       },
       scss: {
         files: ['stylesheets/scss/**/*.scss'],
-        tasks: ['sass', 'cssmin']
+        tasks: ['sass']
+        //tasks: ['sass', 'cssmin']
       },
       uglify: {
         files: ['javascripts/*.js'],
@@ -63,6 +64,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  //grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 };
