@@ -1,0 +1,8 @@
+# Ignore DS Store
+.DS_Store
+
+# Ignore NPM files
+node_modules/
+
+# Ignore sass cache
+.sass-cache/
